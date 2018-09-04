@@ -4,22 +4,19 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzzSolution {
 
-    public String fizzBuzz(Integer number) throws SolutionNotImplementedException{
-       
-    	if(number != null) {
-    		
-    		for(int i=0;i<100;i++) {
-    			if(i % number.intValue() == 0) {
-    				System.out.println("Fizz");
-    			}else {
-    				System.out.println(i);
-    			}
-    				
-        		
-        	}
-        	
-    	}
-    	
-    }
+	public String fizzBuzz(Integer number) throws SolutionNotImplementedException {
+		String result="";
+		if (number != null) {
+			if (number.intValue() % 3 == 0 && number.intValue() % 5 == 0) {
+				result = "FizzBuzz";
+			} else if (number.intValue() % 3 == 0) {
+				result = "Fizz";
+			} else if (number.intValue() % 5 == 0) {
+				result = "Buzz";
+			}			
+		}
+		return result;
+
+	}
 
 }
